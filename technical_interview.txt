@@ -1,0 +1,26 @@
+//Soution 4: Prompt: Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+//questions for interviewers:
+can I use built in string methods for this function?
+
+//Possible edge cases
+empty string
+
+
+inputs: "hello"
+Output: false
+
+inputs: "copyright"
+output: true
+
+function isUnique(string){
+  for (let i = 0; i < string.length; i++){
+    for (let j = i + 1; j < string.length; j++){
+      if (string[i].toLowerCase() === string[j].toLowerCase()){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(isUnique("hello"));
